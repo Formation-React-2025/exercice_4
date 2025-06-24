@@ -16,7 +16,7 @@ const ExerciceLayout = ({
     </section>
 
     <footer>
-      {new Date().toLocaleDateString('fr-FR', {
+      {`Layout rendered le ${new Date().toLocaleDateString('fr-FR', {
         weekday: 'long',
         year: "numeric",
         month: "long",
@@ -24,7 +24,7 @@ const ExerciceLayout = ({
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
-      })}
+      })}`}
     </footer>
   </section>
 );
