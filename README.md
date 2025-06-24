@@ -40,7 +40,7 @@ Plusieurs possibilités :
   - ```git clone https://github.com/Formation-React-2025/exercice_2.git```
 
 ### Création d'un composant avec des props
-- Lancer la commande ```npm install prop-types@15.8.2```.
+- Lancer la commande ```npm install prop-types@15.8.1```.
  
 - Dans le package ```./src/components/exercice-2```, créer le composant ```Exercice2``` dont le comportement est le même que le composant ```Exercice1``` aux différences suivantes :
   -	Le titre du header est maintenant reçu en props
