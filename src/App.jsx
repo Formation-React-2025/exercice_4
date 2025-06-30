@@ -1,9 +1,9 @@
 import React from 'react';
-import Exercice3 from './components/exercices/exercice-3/Exercice3';
+import Exercice3Page from './features/exercice-3/pages/Exercice3Page';
 
 const App = () => (
   <main>
-    <Exercice3 />
+    <Exercice3Page />
 
   </main>
 );

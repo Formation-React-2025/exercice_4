@@ -1,17 +1,13 @@
-import React, { Children, } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-const Exercice2 = ({
-  title,
-  children = undefined,
-}) => (
+const Exercice1Page = () => (
   <section>
     <header>
-      <h2>{title}</h2>
+      <h2>Exercice 1</h2>
     </header>
 
     <section>
-      {Children.map(children, (c) => c)}
+      Hello world !
     </section>
 
     <footer>
@@ -28,9 +24,4 @@ const Exercice2 = ({
   </section>
 );
 
-Exercice2.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node,
-};
-
-export default Exercice2;
+export default Exercice1Page;

@@ -1,6 +1,6 @@
 import React, { useState, } from 'react';
-import ExerciceLayout from '../../layout/exercice-layout/ExerciceLayout';
-import './Exercice3.css';
+import PageLayout from '../../../commons/components/layout/page-layout/PageLayout';
+import './Exercice3Page.css';
 
 const requiredFieldError = (value) => {
   if (!value?.trim()) {
@@ -25,7 +25,7 @@ const calculateErrors = (formulaire) => {
   }), {});
 };
 
-const Exercice3 = () => {
+const Exercice3Page = () => {
   const [
     formulaire,
     setFormulaire,
@@ -46,7 +46,7 @@ const Exercice3 = () => {
   }
 
   return (
-    <ExerciceLayout
+    <PageLayout
       title="Exercice 3"
     >
       <form
@@ -109,8 +109,8 @@ const Exercice3 = () => {
         </button>
 
       </form>
-    </ExerciceLayout>
+    </PageLayout>
   );
 };
 
-export default Exercice3;
+export default Exercice3Page;

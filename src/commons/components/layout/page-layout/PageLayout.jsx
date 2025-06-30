@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { Children, } from 'react';
+import PropTypes from 'prop-types';
 
-const Exercice1 = () => (
+const PageLayout = ({
+  title,
+  children = undefined,
+}) => (
   <section>
     <header>
-      <h2>Exercice 1</h2>
+      <h2>{title}</h2>
     </header>
 
     <section>
-      Hello world !
+      {Children.map(children, (c) => c)}
     </section>
 
     <footer>
@@ -24,4 +28,9 @@ const Exercice1 = () => (
   </section>
 );
 
-export default Exercice1;
+PageLayout.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
+
+export default PageLayout;

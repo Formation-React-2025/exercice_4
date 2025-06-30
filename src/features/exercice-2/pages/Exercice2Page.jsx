@@ -1,18 +1,20 @@
 import React, { Children, } from 'react';
 import PropTypes from 'prop-types';
-import './ExerciceLayout.css';
+import OnClickButton from '../components/on-click-button/OnClickButton';
 
-const ExerciceLayout = ({
+const Exercice2Page = ({
   title,
   children = undefined,
 }) => (
-  <section className="exercice-layout">
+  <section>
     <header>
       <h2>{title}</h2>
     </header>
 
     <section>
       {Children.map(children, (c) => c)}
+
+      <OnClickButton />
     </section>
 
     <footer>
@@ -29,9 +31,9 @@ const ExerciceLayout = ({
   </section>
 );
 
-ExerciceLayout.propTypes = {
+Exercice2Page.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
 
-export default ExerciceLayout;
+export default Exercice2Page;
