@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Exercice1 = () => (
+const Exercice1Page = () => (
   <section>
     <header>
       <h2>Exercice 1</h2>
@@ -24,4 +24,4 @@ const Exercice1 = () => (
   </section>
 );
 
-export default Exercice1;
+export default Exercice1Page;

@@ -1,7 +1,7 @@
 import React, { Children, } from 'react';
 import PropTypes from 'prop-types';
 
-const Exercice2 = ({
+const PageLayout = ({
   title,
   children = undefined,
 }) => (
@@ -15,7 +15,7 @@ const Exercice2 = ({
     </section>
 
     <footer>
-      {new Date().toLocaleDateString('fr-FR', {
+      {`Layout rendered le ${new Date().toLocaleDateString('fr-FR', {
         weekday: 'long',
         year: "numeric",
         month: "long",
@@ -23,14 +23,14 @@ const Exercice2 = ({
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
-      })}
+      })}`}
     </footer>
   </section>
 );
 
-Exercice2.propTypes = {
+PageLayout.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
 
-export default Exercice2;
+export default PageLayout;
