@@ -1,6 +1,6 @@
 import React, { useState, } from 'react';
-import InputText from '../../input/input-text/InputText';
-import LabelButton from '../../input/buttons/label-button/LabelButton';
+import InputText from '../../../commons/components/input/input-text/InputText';
+import LabelButton from '../../../commons/components/input/buttons/label-button/LabelButton';
 
 const requiredFieldError = (value) => {
   if (!value?.trim()) {
