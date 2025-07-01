@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, {useEffect, useState,} from 'react';
 import InputText from '../../../commons/components/input/input-text/InputText';
 import LabelButton from '../../../commons/components/input/buttons/label-button/LabelButton';
 
@@ -27,12 +27,25 @@ const calculateErrors = (formulaire) => {
 
 const Exercice4Form = () => {
   const [
+    displayMessage,
+    setDisplayMessage,
+  ] = useState(false);
+
+  const [
     formulaire,
     setFormulaire,
   ] = useState({
     nom: '',
     prenom: '',
   });
+
+  useEffect(() => {
+    if (formulaire.nom === 'Dupont') {
+      console.log('Le nom saisit est Dupont !')
+    }
+  }, [
+    formulaire.nom,
+  ]);
 
   const onEnregistrerClick = (e) => {
     e.preventDefault();
@@ -87,7 +100,14 @@ const Exercice4Form = () => {
       <LabelButton
         type="submit"
         label="Enregistrer"
+        onClick={() => setDisplayMessage(formulaire.prenom === 'Jean')}
       />
+
+      {displayMessage && (
+        <span>
+          Le prénom est Jean !!
+        </span>
+      )}
     </form>
   );
 };
