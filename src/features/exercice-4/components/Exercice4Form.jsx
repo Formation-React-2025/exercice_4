@@ -26,10 +26,10 @@ const calculateErrors = (formulaire) => {
 };
 
 const Exercice4Form = () => {
-  const [
-    displayMessage,
-    setDisplayMessage,
-  ] = useState(false);
+  // const [
+  //   displayMessage,
+  //   setDisplayMessage,
+  // ] = useState(false);
 
   const [
     formulaire,
@@ -37,6 +37,7 @@ const Exercice4Form = () => {
   ] = useState({
     nom: '',
     prenom: '',
+    displayMessage: false,
   });
 
   useEffect(() => {
@@ -50,12 +51,17 @@ const Exercice4Form = () => {
   const onEnregistrerClick = (e) => {
     e.preventDefault();
     const errors = calculateErrors(formulaire);
-    if (Object.keys(errors)?.length > 0) {
-      setFormulaire({
-        ...formulaire,
-        errors,
-      });
-    }
+    setFormulaire({
+      ...formulaire,
+      errors,
+      displayMessage: formulaire.prenom === 'Jean',
+    })
+    // if (Object.keys(errors)?.length > 0) {
+    //   setFormulaire({
+    //     ...formulaire,
+    //     errors,
+    //   });
+    // }
   }
 
   return (
@@ -100,10 +106,9 @@ const Exercice4Form = () => {
       <LabelButton
         type="submit"
         label="Enregistrer"
-        onClick={() => setDisplayMessage(formulaire.prenom === 'Jean')}
       />
 
-      {displayMessage && (
+      {formulaire.displayMessage && (
         <span>
           Le prénom est Jean !!
         </span>
